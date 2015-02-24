@@ -58,6 +58,7 @@ var processFormData = function (event) {
 
 // If the browser supports the date input type, don't do anything
 // This code is cribbed from http://code.tutsplus.com/tutorials/quick-tip-cross-browser-datepickers-within-minutes--net-20236
+///////////////////////////////////// CAROLYN ///////////////////////////////////////////////////////////////////////////
 var initDatePicker = function () {
   "use strict";
   var elem = document.createElement('input');
@@ -72,6 +73,7 @@ var initDatePicker = function () {
 // Initialize the jQuery UI plugin's DatePicker plugin for the planting time
 initDatePicker();
 
+////////////////////////////////////// ERIKA /////////////////////////////////////////////////////////////////////////
 // TODO: Initialize the default timepicker plugin for the planting time
 // See: http://jonthornton.github.io/jquery-timepicker/
 
@@ -81,6 +83,7 @@ var telInput = $("#phone"),
     errorMsg = $("#error-msg"),
     validMsg = $("#valid-msg");
 
+/////////////////////////////////////// JARED ////////////////////////////////////////////////////////////////////////////
 // TODO: initialise intlTelInput plugin to use autoFormat, autoPlaceholder, and to preventInvalidNumbers
 // and don't forget to use utilsScript to load Google's libphonenumber utility (already included at
 // js/vendor/intl-tel-input-master/lib/libphonenumber/build/utils.js ).
