@@ -3,7 +3,7 @@
 var DEBUG = true;
 /*global console:false, DEBUG:false, $:false*/
 // The purpose of processFormData is to do final validation checks
-// Erika Testing Comment
+// Erika Testing Comment 2
 // Jared Testing Comment
 var processFormData = function (event) {
   "use strict";
