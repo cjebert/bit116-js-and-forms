@@ -77,6 +77,8 @@ initDatePicker();
 // TODO: Initialize the default timepicker plugin for the planting time
 // See: http://jonthornton.github.io/jquery-timepicker/
 
+$('#planting_time').timepicker();
+
 // Setup variables for using 
 // Read: http://www.sitepoint.com/working-phone-numbers-javascript/
 var telInput = $("#phone"),
