@@ -89,17 +89,38 @@ var telInput = $("#phone"),
 // js/vendor/intl-tel-input-master/lib/libphonenumber/build/utils.js ).
 // See: http://jackocnr.com/lib/intl-tel-input/examples/gen/is-valid-number.html
 
+telInput.intlTelInput({
+  autoFormat: true,
+  autoPlaceholder: true,
+  preventInvalidNumbers: true,
+  utilsScript: "js/vendor/intl-tel-input-master/lib/libphonenumber/build/utils.js"
+});
 
 // TODO: Below, make sure you use jQuery's show and hide methods!
+
+//$('.show').show();
+//$('.hide').hide();
 
 // TODO: on blur: validate telInput
 // if valid show validMsg
 // if there is an error show errorMsg
-telInput.blur(function () {
-
+telInput.blur(function(){
+  if ($.trim(telInput.val())) {
+    if (telInput.intlTelInput("isValidNumber")) {
+      errorMsg.css("display", "none");
+      validMsg.css("display", "inline"); 
+    } 
+    else {
+      telInput.addClass("error");
+      errorMsg.css("display", "inline");
+      validMsg.css("display", "none");
+    }
+  }
 });
-
 // TODO: on keydown: reset telInput, hide errorMsg and hide validMsg
 telInput.keydown(function () {
-
+  telInput.removeClass("error");
+  errorMsg.css("display", "none");
+  validMsg.css("display", "none");
 });
+
