@@ -23,7 +23,10 @@ var processFormData = function (event) {
     rules : {
       // TODO: Make sure the planting date has been set by the user and is in dateISO format
 	  // See: http://jqueryvalidation.org/dateISO-method/
-	  
+	 field : {
+           required : true,
+           dateISO : true
+      } 
     },
     invalidHandler : function (event, validator) {
       // 'this' refers to the form
