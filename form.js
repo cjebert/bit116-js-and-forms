@@ -70,7 +70,9 @@ var initDatePicker = function () {
   if (elem.type === 'text') {
     // TODO: The browser doesn't understand date input types, so use the jQuery UI Date Picker
 	// with date format 'yy-mm-dd'
-
+	$( "#planting_date" ).datepicker({
+		dateFormat: 'yy-mm-dd'
+	});
   }
 };
 // Initialize the jQuery UI plugin's DatePicker plugin for the planting time
